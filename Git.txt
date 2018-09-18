@@ -1,0 +1,58 @@
+//1. Cài đặt và khởi tạo
+
+git config --global user.name = "traudat789"
+- Cấu hình username cho git project
+
+git config --global user.email = "lekhaclap.ce@gmail.com"
+- Cấu hình email cho git project
+
+git init
+- Cài đặt git vào project
+
+git status
+- Kiểm tra status của git
+
+//2. Add vào local repository
+
+git add "Test.txt"
+- Add một file vào để sẵn sàng commit
+
+git add .
+- Add tất cả các file vào để sẵn sàng commit
+
+git commit -m "commit to repository"
+- Commit vào local repository
+- "": ghi chú khi commit, hiện trên github
+
+git commit -a -m "commit to repository"
+- Lệnh rút gọn của cả add và commit
+
+git log
+- Kiểm tra lịch sử ghi file vào git
+
+//3. Push lên remote repository
+
+git remote add gitproject https://github.com/traudat789/Test.git
+- Trỏ đến remote repository
+- gitproject: tên của git project, là tên thư mục chứa git
+- https...: địa chỉ cần push đến
+
+git push --set-upstream gitproject master
+- Push git project lên remote repository
+
+//4. Clone về máy tính cá nhân
+
+git clone https://github.com/traudat789/Test.git
+- Sinh ra bản clone trên máy tính, trùng tên với project trên git
+- Sau khi clone một project về máy tính, muốn push lên lại thì chỉ cần add, commit và push.
+
+//5. Backup
+- Muốn backup đến lần commit nào thì copy ID của lần commit đó và dùng lệnh sau:
+git revert ID
+- Sau đó ấn Ctrl + C để dừng
+- Sau đó push lên remote repository lại
+git push 
+
+//6. Pull Project
+- Khi có người làm chung dự án muốn pull project của bạn về và tiếp tục build
+git pull
